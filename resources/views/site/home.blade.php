@@ -13,7 +13,7 @@
                             <h3 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".1s" >{{$front_config['title']}}</h3>
                             <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">{{$front_config['subtitle']}}</p>
                             <div class="video_service_btn wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
-                                <a href="#" class="boxed-btn3">Get Start Now</a>
+                                <a href="#" class="boxed-btn3">Começar agora!</a>
                             </div>
                         </div>
                     </div>
