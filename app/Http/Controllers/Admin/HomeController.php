@@ -15,9 +15,10 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    public function index($d = 30){
-        if(isset($_GET['d']) && !empty($_GET['d'])){
-            $d = $_GET['d'];
+    public function index(Request $request){
+        $d = intval($request->input('d', 30));
+        if($d > 360){
+            $d = 360;
         }
         
         // Contagem de visitantes
@@ -52,7 +53,8 @@ class HomeController extends Controller
             'pageCount' => $pageCount,
             'userCount' => $userCount,
             'pageLabels' => $pageLabels,
-            'pageValues' => $pageValues
+            'pageValues' => $pageValues,
+            'dateInterval' => $d
         ]);
     }
 }

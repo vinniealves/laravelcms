@@ -10,22 +10,21 @@
             <h1>Dashboard</h1>
         </div>
         <div class="col-md-6">
-            <form action="{{ route('admin') }}" method="get" class="form-inline float-md-right">
-                <select name="d" class="form-control form-control-sm mr-1">
-                    <option value="30">Últimos 30 dias</option>
-                    <option value="60">Últimos 60 dias</option>
-                    <option value="90">Últimos 90 dias</option>
-                    <option value="120">Últimos 120 dias</option>
-                    <option value="150">Últimos 150 dias</option>
-                    <option value="180">Últimos 180 dias</option>
-                    <option value="210">Últimos 210 dias</option>
-                    <option value="240">Últimos 240 dias</option>
-                    <option value="270">Últimos 270 dias</option>
-                    <option value="300">Últimos 300 dias</option>
-                    <option value="330">Últimos 330 dias</option>
-                    <option value="360">Últimos 360 dias</option>
+            <form action="{{ route('admin') }}" method="GET" class="form-inline float-md-right">
+                <select onChange="this.form.submit()"  name="d" class="form-control form-control-sm mr-1">
+                    <option {{$dateInterval==30?'selected':''}} value="30">Últimos 30 dias</option>
+                    <option {{$dateInterval==60?'selected':''}} value="60">Últimos 60 dias</option>
+                    <option {{$dateInterval==90?'selected':''}} value="90">Últimos 90 dias</option>
+                    <option {{$dateInterval==120?'selected':''}} value="120">Últimos 120 dias</option>
+                    <option {{$dateInterval==150?'selected':''}} value="150">Últimos 150 dias</option>
+                    <option {{$dateInterval==180?'selected':''}} value="180">Últimos 180 dias</option>
+                    <option {{$dateInterval==210?'selected':''}} value="210">Últimos 210 dias</option>
+                    <option {{$dateInterval==240?'selected':''}} value="240">Últimos 240 dias</option>
+                    <option {{$dateInterval==270?'selected':''}} value="270">Últimos 270 dias</option>
+                    <option {{$dateInterval==300?'selected':''}} value="300">Últimos 300 dias</option>
+                    <option {{$dateInterval==330?'selected':''}} value="330">Últimos 330 dias</option>
+                    <option {{$dateInterval==360?'selected':''}} value="360">Últimos 360 dias</option>
                 </select>
-                <button type="submit" class="btn btn-info btn-sm">Ir</button>
             </form>
         </div>    
     </div>  
